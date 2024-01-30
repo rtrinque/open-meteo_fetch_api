@@ -1,0 +1,11 @@
+1. Data Ingestion
+We will use a python stomp client that we will run in lambda.
+This will then push those messages in an AMS SQS queue
+This should provide reliable and scalable ingestion.
+
+2. Data Transformation
+We can then get messages from the queue and transform them using another lambda function
+
+3. Data Storage
+Depending on the type of data retrieval needed we can either output the transformed data in an S3 bucket or in an RDS database.
+Both solutions provides scalability and reliable backups.  
